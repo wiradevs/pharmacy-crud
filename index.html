@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HADIRSEMBUH</title>
+  <link rel="stylesheet" href="src/css/style.css">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a53653dcab.js" crossorigin="anonymous"></script>
+  <!-- Sweet Alert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.20/dist/sweetalert2.all.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>HADIR<span>SEMBUH<span></h1>
+      <p>
+        HADIRSEMBUH adalah salah satu platform yang dapat anda gunakan dalam mengelola daftar obat yang sudah atau sedang
+        anda input. Tentunya dengan fitur yang membantu dalam pekerjaan farmasi.
+      </p>
+      <a href="#manage-books">Kelola Obat</a>
+    </div>
+  </header>
+
+  <main id="manage-books">
+    <section class="add-book">
+      <div class="add-book-header">
+        <h2>Tambah Obat</h2>
+        <p>
+          Silahkan tambahkan data obat yang akurat dan sesuai dengan kondisi asli dari obat tersebut.
+        </p>
+      </div>
+      <div class="add-book-content">
+        <form action="" method="post" id="addForm">
+          <div class="form-element">
+            <label for="judul-obat">Nama Obat</label>
+            <input type="text" id="judul-obat" name="judul-obat"
+              placeholder="ex: oskadon pancen oye" maxlength="50" required>
+          </div>
+          <div class="form-element">
+            <label for="penulis">Jenis Obat</label>
+            <input type="text" id="penulis" name="penulis" placeholder="ex: Kapsul / pil" maxlength="100" required>
+          </div>
+          <div class="form-element">
+            <label for="tahun-penerimaan">Tanggal penerimaan</label>
+            <input type="date" id="tahun-penerimaan" name="tahun-penerimaan" required>
+          </div>
+          <div class="form-element">
+            <input type="checkbox" id="isComplete" name="isRead" checked>
+            <label for="isComplete">Telah selesai ditambah</label>
+          </div>
+          <div class="form-element">
+            <button type="submit" id="add-to-shelf">Tambahkan obat ke dalam rak</button>
+          </div>
+        </form>
+        <div class="img-section">
+          <img src="./src/img/add-book-ilustration.svg" alt="add-books">
+        </div>
+      </div>
+    </section>
+
+    <section class="search-books">
+      <div class="search-container">
+        <input type="text" id="search-keyword" placeholder="Cari obat berdasarkan judulnya...">
+        <button type="submit" id="search-keyword-button">
+          <img src="src/img/search.svg" alt="Search">
+        </button>
+      </div>
+    </section>
+
+    <section class="uncompleted-books">
+      <div class="uncompleted-books-header" id="uncompleted-books-header">
+        <h2>Daftar Obat <br> Belum Selesai Ditambah</h2>
+      </div>
+      <div class="uncompleted-books-shelf">
+      </div>
+    </section>
+
+    <section class="completed-books">
+      <div class="completed-books-header" id="completed-books-header">
+        <h2>Daftar Obat <br> Telah Selesai Ditambah</h2>
+      </div>
+      <div class="completed-books-shelf">
+      </div>
+    </section>
+
+    <section class="update-book">
+      <div class="container">
+        <div class="update-book-header">
+          <h2>Perbarui Data Obat</h2>
+        </div>
+        <form action="" id="update-form" method="post">
+        </form>
+      </div>
+    </section>
+
+    <audio controls>
+      <source src="src/audio/sound-notification.mp3" type="audio/mpeg">
+    </audio>
+  </main>
+
+  <footer>
+    <p>Build with doa ibu & tawakal by <a href="https://github.com/imsakyanuar">Imsak Yanuar</a></p>
+    <p>RSI Sultan Hadirin Jepara SUBMISSION</p>
+  </footer>
+  <script src="src/js/script.js"></script>
+</body>
+
+</html>
